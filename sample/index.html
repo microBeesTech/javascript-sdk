@@ -1,0 +1,15 @@
+<html>
+<script src="../microBeesSDK.js"></script>
+<script>
+var microBees = new microBees("912833279567500");
+function callback(){
+	var profile = microBees.doRequest('v/1_0/getMyprofile','',function(_data){
+		document.getElementById('profile').innerHTML= JSON.stringify(_data);
+	});
+	
+}
+</script>
+<button onClick="microBees.login(callback)">LOGIN</button>
+<br/>
+<span id="profile"></profile>
+</html>
